@@ -3,6 +3,7 @@ import { Row } from 'reactstrap';
 import IntlMessages from '../../../helpers/IntlMessages';
 import { Colxx, Separator } from '../../../components/common/CustomBootstrap';
 import Breadcrumb from '../../../containers/navs/Breadcrumb';
+import Step1 from '../../../componentsAdds/Step1';
 
 const NewPlan = ({ match }) => (
   <>
@@ -19,6 +20,7 @@ const NewPlan = ({ match }) => (
         </p>
       </Colxx>
     </Row>
+    <Step1 />
   </>
 );
 export default NewPlan;
