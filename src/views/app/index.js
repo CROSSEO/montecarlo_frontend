@@ -5,8 +5,11 @@ import { connect } from 'react-redux';
 import AppLayout from '../../layout/AppLayout';
 // import { ProtectedRoute, UserRole } from '../../helpers/authHelper';
 
-const Gogo = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-gogo" */ './gogo')
+const DashboardMenu = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-dashboard" */ './dashboard')
+);
+const BusinessPlanMenu = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-business-plan" */ './business-plan')
 );
 const SecondMenu = React.lazy(() =>
   import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
@@ -21,10 +24,23 @@ const App = ({ match }) => {
       <div className="dashboard-wrapper">
         <Suspense fallback={<div className="loading" />}>
           <Switch>
-            <Redirect exact from={`${match.url}/`} to={`${match.url}/gogo`} />
+            <Redirect
+              exact
+              from={`${match.url}/`}
+              to={`${match.url}/dashboard`}
+            />
             <Route
-              path={`${match.url}/gogo`}
-              render={(props) => <Gogo {...props} />}
+              path={`${match.url}/dashboard`}
+              render={(props) => <DashboardMenu {...props} />}
+            />
+            <Redirect
+              exact
+              from={`${match.url}/`}
+              to={`${match.url}/business-plan`}
+            />
+            <Route
+              path={`${match.url}/business-plan`}
+              render={(props) => <BusinessPlanMenu {...props} />}
             />
             <Route
               path={`${match.url}/second-menu`}

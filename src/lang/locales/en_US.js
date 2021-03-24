@@ -33,7 +33,7 @@ module.exports = {
   /* 03.Menu */
   'menu.home': 'Home',
   'menu.app': 'Home',
-  'menu.dashboards': 'Dashboards',
+  'menu.dashboard': 'Dashboard',
   'menu.gogo': 'Gogo',
   'menu.start': 'Start',
   'menu.second-menu': 'Second Menu',
@@ -46,7 +46,13 @@ module.exports = {
   'menu.search': 'Search',
   'menu.docs': 'Docs',
   'menu.blank-page': 'Blank Page',
+  'menu.business-plan': 'Business Plan',
+  'menu.newplan': 'New Plan',
+  'menu.upload': 'Upload Plan',
+  'menu.reports': 'Reports',
 
+  /* Label values */
+  'lbl.select-charts': 'Select Charts',
   /* 04.Error Page */
   'pages.error-title': 'Ooops... looks like an error occurred!',
   'pages.error-code': 'Error code',

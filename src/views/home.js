@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import { scroller } from 'react-scroll';
 import Headroom from 'react-headroom';
 import GlideComponent from '../components/carousel/GlideComponent';
-import { buyUrl, adminRoot } from '../constants/defaultValues';
+import { adminRoot } from '../constants/defaultValues';
 
 const slideSettings = {
   type: 'carousel',
@@ -302,16 +302,6 @@ const Home = () => {
           <li className="nav-item">
             <div className="separator" />
           </li>
-          <li className="nav-item text-center">
-            <a
-              className="btn btn-outline-primary btn-sm mobile-menu-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={buyUrl}
-            >
-              BUY
-            </a>
-          </li>
         </ul>
       </div>
 
@@ -371,16 +361,6 @@ const Home = () => {
                     onClick={(event) => scrollTo(event, 'themes')}
                   >
                     THEMES
-                  </a>
-                </li>
-                <li className="nav-item pl-4">
-                  <a
-                    className="btn btn-outline-semi-light btn-sm pr-4 pl-4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={buyUrl}
-                  >
-                    BUY
                   </a>
                 </li>
               </ul>
@@ -705,18 +685,6 @@ const Home = () => {
                   <p>
                     Purchase Gogo to get a fresh start with your new project.
                   </p>
-                </div>
-                <div className="col-12 offset-0 col-lg-6 offset-lg-3 newsletter-input-container">
-                  <div className="text-center mb-3">
-                    <a
-                      className="btn btn-secondary btn-xl"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={buyUrl}
-                    >
-                      BUY NOW
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

@@ -59,3 +59,11 @@ export const colors = [
   'yellowgranola',
   'greysteel',
 ];
+
+export const reportChartSelection = [
+  'VN Nacionais',
+  'VN Exportação',
+  'Name 3',
+  'Name 4',
+  'Name 5',
+];
