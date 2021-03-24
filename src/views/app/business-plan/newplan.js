@@ -21,6 +21,9 @@ const NewPlan = ({ match }) => (
       </Colxx>
     </Row>
     <Step1 />
+    <Step1 />
+    <Step1 />
+    <Step1 />
   </>
 );
 export default NewPlan;
