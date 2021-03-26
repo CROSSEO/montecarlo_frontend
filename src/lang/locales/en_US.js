@@ -46,9 +46,37 @@ module.exports = {
   'menu.search': 'Search',
   'menu.docs': 'Docs',
   'menu.blank-page': 'Blank Page',
+  /* Menu business Plan */
   'menu.business-plan': 'Business Plan',
-  'menu.newplan': 'New Plan',
-  'menu.upload': 'Upload Plan',
+  'menu.newplan': 'Create New',
+  'menu.upload': 'Upload',
+  'menu.business-model': 'Business Model',
+  'menu.project-invest': 'Project Investment',
+
+  /* Menu Risk Analises */
+  'menu.risk-analisys': 'Risk Analysis',
+  'menu.financial-statements': 'Financial Statements',
+  'menu.economic-indicators': 'Economic Indicators',
+  'menu.sensitivity-analysis': 'Sensitivity Analysis',
+  'menu.monte-carlo-simulation': 'Monte Carlo Simulation',
+  'menu.investment-overview': 'Investment Overview',
+
+  /* Funding Sources */
+  'menu.funding-sources': 'Funding Sources',
+  'menu.commuity-support': 'Community Support',
+  'menu.investors': 'Investors',
+  'menu.regional-support': 'Regional Support',
+  'menu.bank-financing': 'Bank Financing',
+  'menu.crowdfunding': 'Crowdfunding',
+
+  /* Support Applications */
+  'menu.applications-support': 'Applications',
+  'menu.new-applications': 'New Applications',
+  'menu.applications-consult': 'Consult',
+
+  /* Support Applications */
+  'menu.news': 'News',
+
   'menu.reports': 'Reports',
 
   /* Label values */

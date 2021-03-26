@@ -9,7 +9,6 @@ import {
   DropdownItem,
   DropdownToggle,
   DropdownMenu,
-  Input,
 } from 'reactstrap';
 
 import { NavLink } from 'react-router-dom';
@@ -23,7 +22,6 @@ import {
 } from '../../redux/actions';
 
 import {
-  menuHiddenBreakpoint,
   searchPath,
   localeOptions,
   isDarkSwitchActive,
@@ -36,7 +34,6 @@ import TopnavDarkSwitch from './Topnav.DarkSwitch';
 import { getDirection, setDirection } from '../../helpers/Utils';
 
 const TopNav = ({
-  intl,
   history,
   containerClassnames,
   menuClickCount,
@@ -64,33 +61,6 @@ const TopNav = ({
         window.location.reload();
       }, 500);
     }
-  };
-
-  const handleSearchIconClick = (e) => {
-    if (window.innerWidth < menuHiddenBreakpoint) {
-      let elem = e.target;
-      if (!e.target.classList.contains('search')) {
-        if (e.target.parentElement.classList.contains('search')) {
-          elem = e.target.parentElement;
-        } else if (
-          e.target.parentElement.parentElement.classList.contains('search')
-        ) {
-          elem = e.target.parentElement.parentElement;
-        }
-      }
-
-      if (elem.classList.contains('mobile-view')) {
-        search();
-        elem.classList.remove('mobile-view');
-        removeEventsSearch();
-      } else {
-        elem.classList.add('mobile-view');
-        addEventsSearch();
-      }
-    } else {
-      search();
-    }
-    e.stopPropagation();
   };
 
   const handleDocumentClickSearch = (e) => {
@@ -125,16 +95,6 @@ const TopNav = ({
     document.removeEventListener('click', handleDocumentClickSearch, true);
   };
 
-  const addEventsSearch = () => {
-    document.addEventListener('click', handleDocumentClickSearch, true);
-  };
-
-  const handleSearchInputKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      search();
-    }
-  };
-
   const handleLogout = () => {
     logoutUserAction(history);
   };
@@ -159,7 +119,6 @@ const TopNav = ({
     clickOnMobileMenuAction(_containerClassnames);
   };
 
-  const { messages } = intl;
   return (
     <nav className="navbar fixed-top">
       <div className="d-flex align-items-center navbar-left">
@@ -181,23 +140,6 @@ const TopNav = ({
         >
           <MobileMenuIcon />
         </NavLink>
-
-        <div className="search">
-          <Input
-            name="searchKeyword"
-            id="searchKeyword"
-            placeholder={messages['menu.search']}
-            value={searchKeyword}
-            onChange={(e) => setSearchKeyword(e.target.value)}
-            onKeyPress={(e) => handleSearchInputKeyPress(e)}
-          />
-          <span
-            className="search-icon"
-            onClick={(e) => handleSearchIconClick(e)}
-          >
-            <i className="simple-icon-magnifier" />
-          </span>
-        </div>
 
         <div className="d-inline-block">
           <UncontrolledDropdown className="ml-2">
