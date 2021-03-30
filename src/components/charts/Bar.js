@@ -2,9 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Chart } from 'chart.js';
 
-import { barChartOptions } from './config';
-
-const Bar = ({ data, shadow = false }) => {
+const Bar = ({ data, barOptions, shadow = false }) => {
   const chartContainer = useRef(null);
   const [, setChartInstance] = useState(null);
 
@@ -34,12 +32,12 @@ const Bar = ({ data, shadow = false }) => {
       const context = chartContainer.current.getContext('2d');
       const newChartInstance = new Chart(context, {
         type: shadow ? 'barWithShadow' : 'bar',
-        options: barChartOptions,
+        options: barOptions,
         data,
       });
       setChartInstance(newChartInstance);
     }
-  }, [chartContainer, data, shadow]);
+  }, [chartContainer, data, barOptions, shadow]);
 
   return <canvas ref={chartContainer} />;
 };

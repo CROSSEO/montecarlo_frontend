@@ -61,9 +61,9 @@ export const colors = [
 ];
 
 export const reportChartSelection = [
-  'VN Nacionais',
-  'VN Exportação',
-  'Name 3',
+  'VN',
+  'Cash Flow',
+  'Ponto Crítico',
   'Name 4',
   'Name 5',
 ];
